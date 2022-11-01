@@ -1,0 +1,839 @@
+@import "fonts";
+@import "colors";
+
+*:focus {
+	//відключення focus bootstrap
+	outline: none !important;
+	box-shadow: none !important;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	transition: background-color 9999s ease-in-out 0s;
+}
+input:-webkit-autofill {
+	font-size: 18px;
+}
+
+svg path {
+	stroke: inherit;
+	stroke-width: inherit;
+	fill: inherit;
+}
+body {
+	font-family: OpenSans, sans-serif;
+	min-width: 375px;
+	font-size: 14px;
+	line-height: 16px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+img {
+	width: 100%;
+}
+strong {
+	font-weight: 700;
+}
+a {
+	display: block;
+	color: inherit;
+	cursor: pointer;
+	&:hover {
+		text-decoration: none;
+		color: inherit;
+	}
+}
+ol,
+ul,
+dl {
+	margin-top: 0;
+	margin-bottom: 15px;
+	color: #676767;
+}
+picture {
+	display: flex;
+	justify-content: center;
+}
+sup {
+	position: relative;
+	height: 0;
+	line-height: 1;
+	vertical-align: baseline;
+	font-size: 10px;
+	cursor: pointer;
+	bottom: 0.8em;
+}
+main {
+	overflow: hidden;
+}
+//font-size
+.h1 {
+	font-family: CooperHewitt;
+	font-size: 59px;
+	line-height: 1.2;
+	font-weight: 400;
+	color: #0080c8;
+	letter-spacing: 7px;
+	text-transform: uppercase;
+	padding-bottom: 10px;
+}
+.h2 {
+	font-family: CooperHewitt;
+	font-size: 36px;
+	line-height: 1.2;
+	font-weight: 400;
+	color: #e42320;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	padding-bottom: 10px;
+}
+p {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	margin-bottom: 0;
+	color: $elegant-dark;
+}
+ul.list-unstyled {
+	padding: 0 0 0 16px !important;
+	li {
+		position: relative;
+		font-size: 15px;
+		line-height: 26px;
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			width: 5px;
+			height: 5px;
+			background: $unique-dark;
+			border-radius: 50%;
+			left: -16px;
+			top: 10px;
+		}
+		strong {
+			color: $blue-accent;
+		}
+	}
+}
+
+//header
+.navbar {
+	.nav-item {
+		color: #0c71c3;
+		position: relative;
+		font-weight: 600;
+		&:not(:last-child)::after {
+			content: "";
+			height: 80%;
+			border-right: 2px solid #676767;
+			position: absolute;
+			top: 35%;
+			right: 0;
+			transform: translateY(-50%);
+		}
+		&:not(:last-child) .nav-link {
+			margin-right: 2px;
+		}
+		&:first-child .nav-link {
+			padding-left: 0 !important;
+		}
+		&:last-child {
+			.nav-link {
+				padding-right: 0 !important;
+			}
+			&::before {
+				width: calc(100% - 10px);
+				right: 0;
+				left: unset;
+			}
+		}
+		&::before {
+			content: "";
+			display: block;
+			background: #00b5cf;
+			width: calc(100% - 12px);
+			height: 3px;
+			left: 0;
+			position: absolute;
+			top: 25px;
+			transition: all 0.3s ease-in-out;
+			opacity: 0;
+			border-radius: 0;
+		}
+		&:hover {
+			color: #bdc8d5;
+			&::before {
+				opacity: 1;
+			}
+		}
+	}
+	.nav-link {
+		padding: 0px 10px !important;
+		font-family: CooperHewitt;
+	}
+}
+//section-top
+.section-top {
+	position: relative;
+	padding-bottom: 280px;
+	.wrapper {
+		max-width: 75%;
+		p {
+			width: 65%;
+			font-size: 18px;
+		}
+		.img-wrap {
+			position: absolute;
+			top: -30px;
+			right: -85px;
+			width: 100%;
+			max-width: 1037px;
+			z-index: -1;
+		}
+		.h2 {
+			font-size: 33px;
+			font-weight: 600;
+			letter-spacing: 2px;
+		}
+	}
+}
+
+//critical-process
+.critical-process {
+	.critical-process__desrp {
+		max-width: 75%;
+	}
+	.critical-process__info {
+		gap: 20px;
+	}
+	ul {
+		max-width: 510px;
+	}
+	.separator {
+		width: 94%;
+		margin: 0 auto;
+		display: block;
+	}
+}
+.critical-process__air {
+	img {
+		max-width: 270px;
+	}
+	a {
+		color: #1c6fb7;
+	}
+	a,
+	p {
+		font-size: 15px;
+	}
+}
+//treatments
+.treatments {
+	.h2 {
+		max-width: 95%;
+	}
+	.treatments__info {
+		max-width: 85%;
+	}
+	.separator img {
+		transform: scaleX(1.08) scaleY(1.08);
+	}
+}
+.img-wrap-border {
+	border-radius: 11px;
+	overflow: hidden;
+	border: 1px solid #35a8e0;
+	padding: 20px 30px;
+}
+.caption {
+	font-size: 13px;
+	line-height: 1.7em;
+	color: $elegant-dark;
+	padding-top: 10px;
+}
+.quote {
+	max-width: 520px;
+	color: #0c71c3;
+	font-size: 16px;
+	line-height: 24px;
+}
+.quote__info {
+	position: relative;
+	left: -30px;
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		background-image: url(@img/quote.svg);
+		background-size: 40px 40px;
+		display: inline-block;
+		width: 40px;
+		height: 40px;
+	}
+	&::before {
+		left: -60px;
+		top: 0;
+	}
+	&::after {
+		right: -40px;
+		bottom: 0;
+		transform: rotate(-180deg);
+	}
+}
+//multitarget-drugs
+.multitarget-drugs {
+	.h2 {
+		max-width: 970px;
+	}
+	.img-wrap-border {
+		gap: 40px;
+		.img-wrap {
+			width: 50%;
+		}
+	}
+	.multitarget-drugs__info {
+		gap: 20px;
+	}
+	ul {
+		max-width: 510px;
+		li {
+			&::before {
+				background: $blue-accent;
+			}
+		}
+	}
+	p {
+		font-size: 15px;
+	}
+	.separator img {
+		transform: scaleX(1.08) scaleY(1.08);
+	}
+}
+//traumeel-well-established
+.traumeel-well-established {
+	.h2 {
+		max-width: 860px;
+	}
+}
+.raumeel-well-established__info {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-column-gap: 60px;
+	grid-row-gap: 40px;
+	margin: 0 -14px;
+}
+.raumeel-well-established__item {
+	padding: 30px 20px 20px 25px;
+	border-radius: 20px;
+	margin-bottom: 0;
+	position: relative;
+	ul.list-unstyled {
+		max-width: 280px;
+		z-index: 2;
+		li {
+			font-size: 16px;
+			line-height: 29px;
+			font-family: CooperHewitt;
+		}
+		strong {
+			color: $elegant-dark;
+		}
+	}
+	&:first-child {
+		border: 1px solid #63a955;
+		.h3 {
+			color: #63a955;
+			right: 50px;
+			bottom: 60px;
+			text-align: right;
+		}
+	}
+	&:nth-child(2) {
+		border: 1px solid #0080c8;
+		ul {
+			margin-left: auto;
+		}
+		.h3 {
+			color: #0080c8;
+			left: 30px;
+			bottom: 60px;
+		}
+	}
+	&:nth-child(3) {
+		border: 1px solid #d13d32;
+		.h3 {
+			color: #d13d32;
+			top: 60px;
+			right: 50px;
+			text-align: right;
+		}
+	}
+	&:last-child {
+		border: 1px solid #979797;
+		ul {
+			margin-left: auto;
+		}
+		.h3 {
+			color: #979797;
+			top: 60px;
+			left: 30px;
+		}
+	}
+	.h3 {
+		font-family: CooperHewitt;
+		font-size: 24px;
+		line-height: 26px;
+		font-weight: 600;
+		position: absolute;
+		z-index: 2;
+		max-width: 150px;
+	}
+}
+.raumeel-well-established__wrapper {
+	position: relative;
+	.traumeel-cross {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-55%, -43%);
+		max-width: 524px;
+	}
+	.traumeel-loader {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		max-width: 90px;
+		transform: translate(-59%, -28%);
+	}
+}
+//inflammation-resolution
+.inflammation-resolution {
+	.separator {
+		transform: scaleX(1.08) scaleY(1.08);
+	}
+	p {
+		max-width: 75%;
+	}
+}
+//references
+.references {
+	background: #d7e6f3;
+	.h3 {
+		font-family: CooperHewitt;
+		font-size: 28px;
+		color: #35a8e0 !important;
+	}
+}
+.references__info {
+	gap: 60px;
+	ol {
+		width: calc(50% - 10px);
+		padding-left: 0;
+		li {
+			font-size: 15px;
+			line-height: 26px;
+			color: #474747;
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+//footer
+.regulation {
+	color: $elegant-dark;
+	> div {
+		position: relative;
+		display: flex;
+		align-items: center;
+		&:not(:last-child)::after {
+			content: "";
+			padding-right: 5px;
+			margin-right: 5px;
+			height: 80%;
+			border-right: 1px solid #676767;
+		}
+		a {
+			color: #2ea3f2;
+		}
+	}
+}
+//..................................................................................................MOBILE
+//..................................................................................................(max-width: 1439px)
+@media (max-width: 1439px) {
+}
+//..................................................................................................(min-width: 1200px)
+@media (min-width: 1260px) {
+}
+//..................................................................................................(max-width: 1199px)
+@media (max-width: 1259px) {
+	.container {
+		max-width: calc(80% + 30px);
+	}
+	.section-top {
+		.row {
+			margin: 0 -65px;
+		}
+		.wrapper {
+			.img-wrap {
+				top: 85%;
+				right: -50px;
+				transform: translate(0, -50%) scaleX(0.9) scaleY(0.9);
+			}
+			p {
+				font-size: 15px;
+			}
+		}
+	}
+
+	.h2 {
+		max-width: 90%;
+	}
+	.critical-process__info {
+		gap: 60px;
+	}
+	.critical-process ul {
+		max-width: calc(50% - 30px);
+	}
+	.critical-process__air img {
+		max-width: 25%;
+		height: auto;
+		object-fit: contain;
+		object-position: top;
+	}
+	.critical-process .separator {
+		width: 100%;
+		img {
+			transform: scaleX(1.2) scaleY(1.2);
+		}
+	}
+	.treatments .treatments__info {
+		max-width: 90%;
+	}
+	.treatments .separator img {
+		transform: scaleX(1.32) scaleY(1.32);
+	}
+	.quote {
+		max-width: 460px;
+	}
+	.raumeel-well-established__info {
+		grid-column-gap: 50px;
+		grid-row-gap: 30px;
+		margin: 0;
+	}
+	.raumeel-well-established__item {
+		.h3 {
+			font-size: 17px;
+			max-width: 90px;
+		}
+		ul.list-unstyled {
+			max-width: 200px;
+		}
+		&:first-child {
+			.h3 {
+				bottom: 40px;
+			}
+		}
+		&:nth-child(2) {
+			.h3 {
+				bottom: 40px;
+			}
+		}
+		&:nth-child(3) {
+			padding-top: 60px;
+		}
+		&:last-child {
+			padding-top: 60px;
+		}
+	}
+	.raumeel-well-established__wrapper .traumeel-cross {
+		transform: translate(-55%, -48%);
+	}
+	.raumeel-well-established__wrapper .traumeel-loader {
+		transform: translate(-59%, -50%);
+	}
+	.multitarget-drugs .separator img {
+		transform: scaleX(1.32) scaleY(1.32);
+	}
+	.inflammation-resolution .h2 {
+		max-width: 100%;
+	}
+	.inflammation-resolution .separator img {
+		transform: scaleX(1.32) scaleY(1.32);
+	}
+}
+//..................................................................................................(min-width: 980px) and (max-width: 12599px)
+@media (min-width: 980px) and (max-width: 1259px) {
+	.h1 {
+		font-size: 46px;
+		max-width: 85%;
+	}
+}
+//..................................................................................................(max-width: 979px)
+@media (max-width: 979px) {
+	.section-top .row {
+		margin: 0 -15px;
+	}
+	.navbar-toggler {
+		.menu-btn {
+			width: 32px;
+			height: 32px;
+			position: relative;
+			span {
+				width: 20px;
+				height: 2px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				border-radius: 4px;
+				transform: translate(-50%, -50%);
+				background: #2ea3f2;
+				transition: all 0.5s;
+				&:nth-of-type(2) {
+					top: calc(50% - 6px);
+				}
+				&:nth-of-type(3) {
+					top: calc(50% + 6px);
+				}
+			}
+		}
+	}
+	.navbar {
+		.navbar-collapse,
+		.navbar-collapse.collapsing {
+			position: absolute;
+			width: 100%;
+		}
+		.nav-item {
+			width: 100%;
+			padding: 10px 5%;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+			&:hover {
+				opacity: 0.7;
+				background-color: rgba(0, 0, 0, 0.03);
+				color: #0c71c3;
+			}
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+			.nav-link {
+				padding: 0 !important;
+				margin: 0 !important;
+				text-align: left;
+			}
+			&::after,
+			&::before {
+				all: unset !important;
+			}
+		}
+	}
+	.navbar-collapse {
+		position: absolute;
+		top: 40px;
+		z-index: 2;
+		width: 100%;
+		padding: 5%;
+		border-top: 3px solid #2ea3f2;
+		opacity: 1;
+		background: #fff;
+		box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
+	}
+	.section-top {
+		padding-bottom: 80px;
+		.wrapper {
+			max-width: 100%;
+			p {
+				width: 47%;
+			}
+			.img-wrap {
+				position: relative;
+				transform: scaleX(1.44) scaleY(1.44) translate(-5%, 0);
+				right: 0;
+				top: -120px;
+			}
+		}
+	}
+	.h2 {
+		max-width: 100%;
+		font-size: 30px;
+	}
+	.critical-process {
+		.critical-process__desrp {
+			max-width: 100%;
+		}
+		ul {
+			max-width: 100%;
+		}
+		.critical-process__info {
+			gap: 10px;
+		}
+	}
+	.critical-process__air {
+		img {
+			max-width: 520px;
+			margin: 0 auto;
+		}
+	}
+	.treatments .h2,
+	.treatments .treatments__info,
+	.inflammation-resolution p,
+	.multitarget-drugs ul {
+		max-width: 100%;
+	}
+	.treatments .separator img,
+	.multitarget-drugs .separator img,
+	.inflammation-resolution .separator img {
+		transform: scaleX(1.16) scaleY(1.16);
+	}
+	.multitarget-drugs .multitarget-drugs__info {
+		gap: 10px;
+	}
+	.raumeel-well-established__wrapper .traumeel-cross,
+	.raumeel-well-established__wrapper .traumeel-loader {
+		display: none;
+	}
+	.raumeel-well-established__info {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.raumeel-well-established__item ul.list-unstyled {
+		max-width: 100%;
+		margin: 0;
+	}
+	.raumeel-well-established__item {
+		display: flex;
+		flex-direction: column-reverse;
+		padding: 10px 10px 30px 10px !important;
+		border-radius: 7px;
+		.h3 {
+			position: relative !important;
+			top: 0 !important;
+			left: 0 !important;
+			text-align: left !important;
+			max-width: 100% !important;
+			font-size: 22px;
+			margin-bottom: 10px;
+		}
+	}
+	.raumeel-well-established__item ul.list-unstyled li {
+		font-size: 15px;
+	}
+	.references__info {
+		gap: 10px;
+	}
+	.references__info ol {
+		width: 100%;
+	}
+	.references__info ol {
+		margin-bottom: 0;
+	}
+	.raumeel-well-established__item ul.list-unstyled strong {
+		color: #000;
+	}
+}
+//..................................................................................................(min-width: 768px)
+@media (min-width: 768px) {
+}
+//..................................................................................................(min-width: 768px) and (max-width: 1259px)
+@media (min-width: 768px) and (max-width: 1259px) {
+}
+//..................................................................................................(min-width: 768px) and (max-width: 991px)
+@media (min-width: 768px) and (max-width: 991px) {
+}
+//..................................................................................................(max-width: 767px)
+@media (max-width: 767px) {
+	.container {
+		max-width: calc(87% + 30px);
+	}
+	ul.list-unstyled li {
+		font-size: 14px;
+	}
+	.h1 {
+		font-size: 33px;
+		letter-spacing: 3px;
+	}
+	.section-top {
+		padding-bottom: 220px;
+		.wrapper {
+			.img-wrap {
+				transform: scaleX(1.42) scaleY(1.42) translate(-9%, 40%);
+			}
+			.h2 {
+				font-size: 23px;
+			}
+			p {
+				width: 100%;
+			}
+		}
+	}
+	.h2 {
+		font-size: 20px;
+	}
+	.quote {
+		max-width: 420px;
+	}
+	.critical-process .separator img,
+	.treatments .separator img,
+	.multitarget-drugs .separator img,
+	.inflammation-resolution .separator img {
+		transform: scaleX(1.48) scaleY(1.48);
+	}
+	.multitarget-drugs .img-wrap-border {
+		border: unset;
+		.img-wrap {
+			width: 100%;
+		}
+	}
+	.critical-process__air img {
+		width: 85%;
+	}
+	.quote {
+		max-width: 315px;
+	}
+	.quote__info {
+		left: 0;
+	}
+	.regulation {
+		flex-wrap: wrap;
+		.copyright {
+			width: 100%;
+			margin-bottom: 10px;
+			&::after {
+				all: unset !important;
+			}
+		}
+	}
+}
+//..................................................................................................(min-width: 576px) and (max-width: 767px)
+@media (min-width: 576px) and (max-width: 767px) {
+}
+//..................................................................................................(max-width: 575px)
+@media (max-width: 575px) {
+	.section-top .wrapper .img-wrap {
+		transform: scaleX(1.42) scaleY(1.42) translate(-10%, 45%);
+	}
+	.quote {
+		width: 55%;
+	}
+	.quote__info::after {
+		right: -60px;
+	}
+	.section-top {
+		padding-bottom: 200px;
+	}
+	.section-top .wrapper .img-wrap {
+		transform: scaleX(1.42) scaleY(1.42) translate(-10%, 55%);
+	}
+}
+//..................................................................................................(max-width: 575px)
+@media (min-width: 480px) and (max-width: 575px) {
+}
+//..................................................................................................(max-width: 480px)
+@media (max-width: 480px) {
+	.section-top .wrapper .img-wrap {
+		transform: scaleX(1.42) scaleY(1.42) translate(-10%, 65%);
+	}
+}
