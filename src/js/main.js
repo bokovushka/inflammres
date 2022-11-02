@@ -15,3 +15,9 @@ $(document).ready(function () {
 	})
 });
 
+//cookies modal
+$(document).ready(function () {
+	setTimeout(function () {
+		$('#popup-cookies').click();
+	}, 1000);
+});

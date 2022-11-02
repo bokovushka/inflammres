@@ -48,6 +48,7 @@
 		"popper.js": "latest",
 		"sass": "latest",
 		"swiper": "latest",
+		"tippy.js": "latest",
 		"vinyl-ftp": "latest",
 		"webp-converter": "2.2.3",
 		"webpack": "latest",
