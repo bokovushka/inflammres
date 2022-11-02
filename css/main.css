@@ -15,6 +15,14 @@
 }
 
 @font-face {
+  font-family: Geneva;
+  font-display: swap;
+  src: url("../fonts/Geneva.woff2") format("woff2"), url("../fonts/Geneva.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: OpenSans, sans-serif;
   font-display: swap;
   src: url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff");
@@ -54,11 +62,13 @@ svg path {
   fill: inherit;
 }
 
+html,
 body {
   font-family: OpenSans, sans-serif;
   min-width: 375px;
   font-size: 14px;
   line-height: 16px;
+  height: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -111,6 +121,27 @@ sup {
 
 main {
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.wrapper-main {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .h1 {
@@ -418,13 +449,13 @@ ul.list-unstyled li strong {
 
 .raumeel-well-established__item ul.list-unstyled {
   max-width: 280px;
-  z-index: 2;
 }
 
 .raumeel-well-established__item ul.list-unstyled li {
   font-size: 16px;
   line-height: 29px;
   font-family: CooperHewitt;
+  z-index: 2;
 }
 
 .raumeel-well-established__item ul.list-unstyled strong {
@@ -487,7 +518,6 @@ ul.list-unstyled li strong {
   line-height: 26px;
   font-weight: 600;
   position: absolute;
-  z-index: 2;
   max-width: 150px;
 }
 
@@ -578,6 +608,153 @@ ul.list-unstyled li strong {
 
 .regulation > div a {
   color: #2ea3f2;
+}
+
+.modal-dialog {
+  max-width: 600px;
+  margin: 50px auto;
+}
+
+.modal-content {
+  border-radius: unset;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-body .title {
+  font-size: 20px;
+}
+
+.modal-body p {
+  font-size: 14px;
+}
+
+.modal-body a {
+  display: inline-block;
+  border-bottom: 1px dashed #666;
+  color: #2ea3f2 !important;
+}
+
+.modal-body a:hover {
+  border-bottom: unset;
+}
+
+.modal {
+  padding: 0 10px !important;
+}
+
+.modal-button {
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.modal-button .btn {
+  min-height: 40px;
+  padding: 0 15px;
+  line-height: 40px;
+  font-size: 16px;
+  border-radius: unset;
+  opacity: 1;
+}
+
+.modal-button .close {
+  color: #444;
+  background: #eee;
+}
+
+.modal-button .agree {
+  background-color: #00a8e6;
+  color: #fff;
+}
+
+.privacy-policy .h1 {
+  font-size: 37px;
+  color: #1c6fb7;
+  letter-spacing: 0;
+}
+
+.privacy-policy .h2 {
+  color: #1c6fb7;
+  font-size: 26px;
+  letter-spacing: 0;
+}
+
+.privacy-policy .h3 {
+  color: #1c6fb7;
+  font-size: 22px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.privacy-policy ul {
+  padding: 0 0 23px 1em;
+  padding-bottom: 1em;
+  margin-bottom: 0;
+  line-height: 26px;
+  list-style-type: disc;
+}
+
+.privacy-policy ul li {
+  margin-bottom: 10px;
+}
+
+.privacy-policy a {
+  color: #2ea3f2;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.privacy-policy p {
+  padding-bottom: 1em;
+  font-size: 14px;
+}
+
+.privacy-policy .btn {
+  color: #ffffff;
+  border-width: 0px;
+  font-size: 13px;
+  background-color: #1c6fb7;
+  padding: 0.3em 1em;
+  border-radius: unset;
+}
+
+.tippy-box {
+  max-width: 390px !important;
+}
+
+.tippy-content {
+  padding: 20px;
+  font-family: Geneva;
+  width: 390px;
+}
+
+.tippy-content ol {
+  list-style: decimal;
+  padding-left: 0;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.tippy-content ol li {
+  font-family: Geneva !important;
+  color: #fff;
+  list-style-position: inside;
+  font-size: 14px !important;
+  line-height: 26px !important;
+}
+
+.tippy-content ol li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.tippy-content p {
+  color: #fff;
+  font-size: 14px !important;
+  line-height: 26px !important;
+  width: 100%;
 }
 
 @media (max-width: 1259px) {
@@ -988,6 +1165,10 @@ ul.list-unstyled li strong {
 
   .regulation .copyright::after {
     all: unset !important;
+  }
+
+  .tippy-content {
+    width: 365px;
   }
 }
 
