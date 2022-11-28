@@ -739,6 +739,9 @@ ul.list-unstyled {
 		.navbar-collapse.collapsing {
 			position: absolute;
 			width: 100%;
+			&.collapse:not(.show) {
+				display: none !important;
+			}
 		}
 		.nav-item {
 			width: 100%;
@@ -768,11 +771,16 @@ ul.list-unstyled {
 		top: 40px;
 		z-index: 2;
 		width: 100%;
-		padding: 5%;
+		padding: 0;
 		border-top: 3px solid #2ea3f2;
 		opacity: 1;
 		background: #fff;
 		box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
+		.navbar-nav {
+			width: 100%;
+			padding: 5% 0;
+			margin: 0;
+		}
 	}
 	.section-top {
 		padding-bottom: 80px;
